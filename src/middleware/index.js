@@ -4,8 +4,9 @@ import thunk from 'redux-thunk'
 
 import { applyMiddleware } from 'redux'
 
-export default applyMiddleware({
+export default applyMiddleware(
+    thunk,
     checker,
-    logger,
-    thunk
-})
+    logger
+    
+)

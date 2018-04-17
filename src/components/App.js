@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import ConnectedTodos from './Todos' //also ken use Todos
 import ConnectedGoals from './Goals' //also ken use Goals
 
+import { handleInitialData }  from '../actions/shared'
+
 
 class App extends Component {
   componentDidMount(){
@@ -13,7 +15,7 @@ class App extends Component {
   }
   render() {
 
-      const { loading } = store.getState()
+      const { loading } = this.props
 
       if (loading === true) {
           return <h1>Loading ... </h1>
